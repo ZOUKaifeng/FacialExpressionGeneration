@@ -9,9 +9,9 @@ Our dataset consist of [**BU face data**](http://www.cs.binghamton.edu/~lijun/Re
 ## 3. Results
 Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 ### Example           
-| Happy  | Surprise |  
-| ------------- | ------------- | 
-| <img  src="Results/happy.gif" height="270" /> | <img src="Results/surprise.gif" height="270" /> |           
+| Happy  | Surprise |  Angry | 
+| ------------- | ------------- | ------------- | 
+| <img  src="Results/happy.gif" height="270" /> | <img src="Results/surprise.gif" height="270" /> |  <img src="Results/angry.gif" height="270" /> |            
                                               
 ## 4. Future work
 1. CVAE
