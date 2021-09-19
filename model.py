@@ -35,26 +35,31 @@ class LayerNormalization(nn.Module):
         return ln_out
 
 class PositionalEncoding(nn.Module):
-    "Implement the PE function."
-    def __init__(self, d_model, dropout, max_len=5000):
-        super(PositionalEncoding, self).__init__()
-        self.dropout = nn.Dropout(p=dropout)
-        
+
+    def __init__(self, d_model, dropout = 0.1, max_len=512, freq=64):
+        super().__init__()
+
         # Compute the positional encodings once in log space.
-        pe = torch.zeros(max_len, d_model)
-        position = torch.arange(0, max_len).unsqueeze(1)
-        div_term = torch.exp(torch.arange(0, d_model, 2) *
-                             -(math.log(10000.0) / d_model))
+        pe = torch.zeros(max_len, d_model).float()
+        pe.require_grad = False
+
+        
+        position = torch.arange(0, max_len).float().unsqueeze(1)
+        div_term = (torch.arange(0, d_model, 2).float() * -(math.log(freq) / d_model)).exp()
+        if d_model%2==1:
+             div_term2 = div_term[:-1]
+        else:
+             div_term2 = div_term
+             
         pe[:, 0::2] = torch.sin(position * div_term)
-        pe[:, 1::2] = torch.cos(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term2)
+
         pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
-        
+
     def forward(self, x):
-        x = x + Variable(self.pe[:, :x.size(1)], 
-                         requires_grad=False)
-  
-        return self.dropout(x)
+        return x + self.pe[:, :x.size(1)]
+
 
 
 def attention(query, key, value, mask=None, dropout=None):
@@ -65,10 +70,9 @@ def attention(query, key, value, mask=None, dropout=None):
              / math.sqrt(d_k)
 
     if mask is not None:
-        
-        
-        mask = mask.unsqueeze(1).repeat(1,4, 1, scores.shape[-1])
 
+
+    #    mask = mask.unsqueeze(1).repeat(1,4, 1, scores.shape[-1])
         scores = scores.masked_fill(mask == 0, -1e9)
     p_attn = F.softmax(scores, dim = -1)
 
@@ -93,9 +97,12 @@ class Multi_Head_Attention(nn.Module):
 
     def forward(self, q, k, v, mask = None):
         batch_size = q.size(0)
+
         Q = self.fc_Q(q)
         K = self.fc_K(k)
         V = self.fc_V(v)
+        # print("Q",(Q[:,0,:]-Q[:,1,:]).mean())
+        # print("K", (K[:,0,:]-K[:,1,:]).mean())
         Q = Q.view(batch_size, -1, self.num_head, self.dim_head).transpose(1, 2)
         K = K.view(batch_size, -1, self.num_head, self.dim_head).transpose(1, 2)
         V = V.view(batch_size, -1, self.num_head, self.dim_head).transpose(1, 2)
@@ -138,7 +145,7 @@ class PositionwiseFeedForward(nn.Module):
 
 
 class TransformerEncoder(nn.Module):
-    def __init__(self, encode_unit, latent_size, num_head, dropout = 0.3):
+    def __init__(self, encode_unit, latent_size, num_head, dropout = 0.1):
         super(TransformerEncoder, self).__init__()
         
 
@@ -156,7 +163,6 @@ class TransformerEncoder(nn.Module):
         x_norm = self.layer_norm(x)
         att = self.attention(x_norm, x_norm, x_norm, mask)
         x = x + self.dropout(att)
-        x_norm = self.out_layer_norm(x)
         x = self.feed_forward(x_norm)
         x = x + self.dropout(x)
 
@@ -166,7 +172,7 @@ class TransformerEncoder(nn.Module):
 
 class TransformerDecoder(nn.Module):
 
-    def __init__(self, num_frame, decode_unit, num_head, dropout = 0.3):
+    def __init__(self, num_frame, decode_unit, num_head, dropout = 0.1):
         super(TransformerDecoder, self).__init__()
         
         
@@ -179,14 +185,15 @@ class TransformerDecoder(nn.Module):
         self.feed_forward = PositionwiseFeedForward(decode_unit, ff_size=decode_unit*4,
                                                 dropout=dropout)
     def forward(self,inputs, z, mask = None):
-        
-        
+       
+        dec_mask = autoregressive_mask(inputs).unsqueeze(1)
         inputs = self.inputs_layer_norm(inputs)
-        targ_att = self.target_att(inputs, inputs, inputs, mask)
+        targ_att = self.target_att(inputs, inputs, inputs, dec_mask)
         x = inputs + self.dropout(targ_att)
         x = self.layer_norm(x)
-        sourc_att = self.source_att(x, z, z)
 
+        sourc_att = self.source_att(x, z, z)
+    
         out = self.feed_forward(self.dropout(sourc_att) + x)
         return out
 
@@ -195,6 +202,19 @@ class TransformerDecoder(nn.Module):
 
 
 
+def autoregressive_mask(tensor):
+    """Generate auto-regressive mask for tensor. It's used to preserving the auto-regressive property.
+    Args:
+        tensor (torch.Tensor): of shape `(batch, seq_len, dim)`.
+    Returns:
+        torch.Tensor: a byte mask tensor of shape `(batch, seq_len, seq_len)` containing mask for
+        illegal attention connections between decoder sequence tokens.
+    """
+    batch_size, seq_len, _ = tensor.shape
+    x = torch.ones(
+        seq_len, seq_len, device=tensor.device).tril(-1).transpose(0, 1)
+
+    return x.repeat(batch_size, 1, 1).byte()
 
 
 class DisenFace(nn.Module):
@@ -215,19 +235,34 @@ class DisenFace(nn.Module):
         self.position_encoding = PositionalEncoding(hidden_unit, dropout)
         self.num_frame = num_frame
         self.hidden_unit = hidden_unit
+        self.num_pts = num_pts
+
+
+        self.mu = nn.Parameter(torch.randn(label_size, hidden_unit))
+        self.sigma = nn.Parameter(torch.randn(label_size, hidden_unit))
     def forward(self, x, one_hot_y, mask, train = True):
         results = {}
         bs = x.shape[0]
+   #     timequeries = x.clone()
+        index = torch.argmax(one_hot_y, dim = 1)
         x = self.embedding_layer(x)
-        timequeries = x.clone()
+      #  timequeries = x.clone()
+        mu = self.mu[index].unsqueeze(1)
+        sigma = self.sigma[index].unsqueeze(1)
+        x = torch.cat((mu, sigma, x ), dim = 1)
+    
+        
         x = self.position_encoding(x)
        
         for i in range(self.num_layers):
             x = self.encoder[i](x)
 
-        h = x.mean(1)
-        z_mean = self.z_mean(h)
-        log_sigma = self.log_sigma(h)
+        
+        z_mean = x[:, 0]
+        log_sigma = x[:, 1]
+
+        # z_mean = self.z_mean(h)
+        # log_sigma = self.log_sigma(h)
         
         results['mean'] = z_mean
         results['log_sigma'] = log_sigma
@@ -237,19 +272,25 @@ class DisenFace(nn.Module):
         else:
             z = results["mean"]
 
-        index = torch.argmax(one_hot_y, dim = 1)
-        z = torch.stack((z, self.actionBiases[index]), axis=1)
+
+        #z = torch.stack((z, self.actionBiases[index]), axis=1)
+        z = z + self.actionBiases[index]
+     #   z = z.unsqueeze(1)
      #   z = torch.cat([z, one_hot_y], -1)
 
        # z = self.z_linear(z)
+        timequeries = torch.zeros(bs,  self.num_frame, self.hidden_unit, device=z.device, requires_grad = True)
+    #    timequeries = torch.normal(mean = 0, std = 1, size=(bs,  self.num_frame, self.num_pts), device = z.device, requires_grad = True)
 
-      #  timequeries = torch.zeros(bs,  self.num_frame, self.hidden_unit, device=z.device, requires_grad = True)
         x = self.position_encoding(timequeries)
+
+
         for i in range(self.num_layers):
             x = self.decoder[i](x, z)
       #  x = self.decoder(x, z, mask)
 
         out = self.final_layer(x)
+
         results["x"] = out
 
         return results 
@@ -264,20 +305,26 @@ class DisenFace(nn.Module):
         z = torch.normal(mean = 0, std = 1, size=(batch_size, dim)).to(mu.device)
         z = z*std + mu
 
-    
 
         return z
 
-    def sample(self, z, one_hot_y, mask):
+    def sample(self, inputs, z, one_hot_y, mask):
         bs = z.shape[0]
         index = torch.argmax(one_hot_y, dim = 1)
-        z = torch.stack((z, self.actionBiases[index]), axis=1)
+
+        z = z + self.actionBiases[index]
 
         timequeries = torch.zeros(bs,  self.num_frame, self.hidden_unit, device=z.device, requires_grad = True)
+
         x = self.position_encoding(timequeries)
         for i in range(self.num_layers):
-            x = self.decoder[i](x, z, mask)
+            x = self.decoder[i](x, z)
 
         out = self.final_layer(x)
-
+        
         return out
+
+
+#z + c :
+#timequries: zeros
+# results: static
