@@ -11,7 +11,7 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 ### Example           
 | Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | 
-| <img  src="Results/happy.gif" height="270" /> | <img src="Results/surprise.gif" height="270" /> |  <img src="Results/angry.gif" height="270" /> |            
+| <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |            
                                               
 ## 4. Future work
 1. CVAE
