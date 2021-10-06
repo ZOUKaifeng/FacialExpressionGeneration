@@ -13,8 +13,8 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 | ------------- | ------------- | ------------- | 
 | <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |            
                                               
-## 4. Future work
-1. CVAE
-2. GAN
-3. Mesh (GCN) or 3DMM?
-5. New dataset with more landmarks
+## 4. Evaluation
+1. FID score
+| Angry  | Disgust |  Fear | Happy | Sad | Surprise |
+| ------------- | ------------- | ------------- | ------------- |------------- |------------- |
+
