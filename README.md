@@ -15,6 +15,8 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
                                               
 ## 4. Evaluation
 1. FID score
+
+
 | Angry  | Disgust |  Fear | Happy | Sad | Surprise |
 | ------------- | ------------- | ------------- | ------------- |------------- |------------- |
 | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
