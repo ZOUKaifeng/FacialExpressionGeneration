@@ -18,6 +18,6 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 
 
 | Model type | Angry  | Disgust |  Fear | Happy | Sad | Surprise |
-| ------------- | ------------- | ------------- | ------------- |------------- |------------- |
+| ------------- | ------------- | ------------- | ------------- |------------- |------------- |------------- |
 | Transformer VAE| $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
 
