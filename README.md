@@ -19,6 +19,6 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 
 | Model type | Angry  | Disgust |  Fear | Happy | Sad | Surprise |
 | ------------- | ------------- | ------------- | ------------- |------------- |------------- |------------- |
-| Transformer VAE| $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
+| Transformer VAE| $62.71\pm11.34$ | $67.77\pm7.69$ | $59.54\pm4.28$ | $58.92\pm7.24$ | $\pm$ | $68.37\pm7.83$ |
 | LSTM VAE| $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
 |Ours | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
