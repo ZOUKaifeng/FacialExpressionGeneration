@@ -143,8 +143,8 @@ epochs = 30
 lr = 0.0001
 weight_decay = 0.0001
 
-
-data_path = 'dataset.pkl'
+'''
+data_path = '../dataset.pkl'
 dataset = np.load(data_path, allow_pickle=True)
 subject = np.array(dataset["data"])
 labels =  np.array(dataset["labels"])
@@ -184,7 +184,10 @@ criterion = nn.CrossEntropyLoss()
 skf = RepeatedStratifiedKFold(n_splits=5, n_repeats=1, random_state = random_seeds) 
 n = 0
 results = []
+
 for train_index, test_index in skf.split(subject, labels):
+    n+=1
+    
     train, valid= train_test_split(train_index, test_size=test_size, random_state = random_seeds)
     
     
@@ -214,8 +217,9 @@ for train_index, test_index in skf.split(subject, labels):
         print(" validation: acc {}, loss {}".format(   valid_acc, valid_loss))
         if best_loss > valid_loss:
 
-            torch.save(net, path + 'classfier_'+str(n)+ '.pt')
-
+            torch.save(net, 'classfier_'+str(n)+ '.pt')
+    
+    test_dataset = torch.load( 'classfier_'+str(n)+ '.pt')
     test_data = subject[test_index]
     test_labels = labels[test_index]
     print("number of test data:", test_data.shape[0])
@@ -226,3 +230,4 @@ for train_index, test_index in skf.split(subject, labels):
     print(" test: acc {}, loss {}".format(   test_acc, test_loss))
     results.append(test_acc)
 print("Final results: mean {}, std {}".format(np.mean(results), np.std(results)))
+'''
