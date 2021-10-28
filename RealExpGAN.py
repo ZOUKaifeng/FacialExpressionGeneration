@@ -115,29 +115,30 @@ class expGAN(nn.Module):
         num_frame = x.shape[1]
         batch_size = x.shape[0]
         self.device = x.device
+
+        self.recon_x = self.results['x']
+
+        y_one_hot = torch.zeros(self.y.shape[0], 6)
+        y_one_hot.scatter_(1, self.y.type(torch.LongTensor).unsqueeze(1), 1)
+        self.y_one_hot = torch.clamp(y_one_hot, EPS, 1-EPS).to(self.device)
+
+
         self.mean = self.results['mean']
+        self.sigma = self.results['log_sigma']
+        z = self.reparameterize(self.mean, self.sigma)
 
-        # y_one_hot = torch.zeros(self.y.shape[0], 6)
-        # y_one_hot.scatter_(1, self.y.type(torch.LongTensor).unsqueeze(1), 1)
-        # self.y_one_hot = torch.clamp(y_one_hot, EPS, 1-EPS).to(self.device)
+       # self.recon_x = self.G(z, num_frame, y)
 
+        #sample
+        z_sample = torch.randn(z.shape[0], z.shape[1]).to(self.device)
+        self.y_sample = torch.randint(6, size = (z.shape[0],)).to(self.device)
+    #    z_sample = torch.cat((z_sample, self.y_sample), dim = 1)
 
+        self.one_hot_sample = torch.zeros(self.y_sample.shape[0], 6)
+        self.one_hot_sample.scatter_(1,self.y_sample.type(torch.LongTensor).unsqueeze(1), 1)
+        self.one_hot_sample = torch.clamp(self.one_hot_sample, EPS, 1-EPS).to(self.device)
 
-    #     self.mean, self.sigma = self.E(x, y, mask)
-    #     z = self.reparameterize(self.mean, self.sigma)
-
-    #     self.recon_x = self.G(z, num_frame, y)
-
-    #     #sample
-    #     z_sample = torch.randn(z.shape[0], z.shape[1]).to(self.device)
-    #     self.y_sample = torch.randint(6, size = (z.shape[0],)).to(self.device)
-    # #    z_sample = torch.cat((z_sample, self.y_sample), dim = 1)
-
-    #     self.one_hot_sample = torch.zeros(self.y_sample.shape[0], 6)
-    #     self.one_hot_sample.scatter_(1,self.y_sample.type(torch.LongTensor).unsqueeze(1), 1)
-    #     self.one_hot_sample = torch.clamp(self.one_hot_sample, EPS, 1-EPS).to(self.device)
-
-    #     self.x_sample = self.G(z_sample, num_frame, self.y_sample)
+        self.x_sample = self.G.sample(z_sample, self.y_sample, num_frame)
 
 
         return self.results['mean']
@@ -239,25 +240,25 @@ class expGAN(nn.Module):
        
 
        # optimize C:
-    #     if optim:
-    #         self.set_requires_grad([self.C, self.D], True)
+        if optim:
+            self.set_requires_grad([self.C, self.D], True)
             
-    #         self.optimizer_C.zero_grad()
-    #         loss_C = self.loss_C()
+            self.optimizer_C.zero_grad()
+            loss_C = self.loss_C()
         
-    #         loss_C.backward()
-    #         self.optimizer_C.step()
+            loss_C.backward()
+            self.optimizer_C.step()
 
 
-    #     #optimize D:
+        #optimize D:
 
-    #     self.optimizer_D.zero_grad()
-    #     loss_D = self.loss_D()
-    #     if optim:
-    #         loss_D.backward()
-    #         self.optimizer_D.step()
-    #     self.results["loss_D"] = loss_D
-        self.results["loss_D"] = torch.tensor(0)
+        self.optimizer_D.zero_grad()
+        loss_D = self.loss_D()
+        if optim:
+            loss_D.backward()
+            self.optimizer_D.step()
+        self.results["loss_D"] = loss_D
+#        self.results["loss_D"] = torch.tensor(0)
     #     #optimize E:
 
         self.set_requires_grad([self.C, self.D], False)
@@ -271,8 +272,8 @@ class expGAN(nn.Module):
         self.results["kld"] = loss_kld
         # optimize G:
         
-    #    loss_GC = self.loss_GC()
-        loss =  loss_G  + 0.0001*loss_kld
+        loss_GC = self.loss_GC()
+        loss =  loss_G  + 0.0001*loss_kld + loss_GC
         if optim:
             loss.backward()
             self.optimizer_G.step()
