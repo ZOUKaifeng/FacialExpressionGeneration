@@ -25,7 +25,7 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 
 | Model type  | FID |
 | ------------- | -------------  |
-| CondGRU| $101.5$ |
-| Action2motion| $33.3$ |
-| GRU VAE | $28.7$ |
-| GRU VAE | $13.7$ |
+| CondGRU| 101.5 |
+| Action2motion| 33.3 |
+| GRU VAE | 28.7 |
+| GRU VAE | 13.7 |
