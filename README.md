@@ -2,8 +2,8 @@
 Towards accurate, high quality, conditioned 3D face sequences generation.
 
 ## 1. Dataset
-Our dataset consist of [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [**MUG face data**](https://mug.ee.auth.gr/fed/)  (To be introduced in the near future).<br>
-  The dataset can be downloaded from [google drive](https://drive.google.com/drive/folders/1d8rlqXgbfDQxcOKvSIssm56jWUVz6oIe?usp=sharing)
+Our dataset consist of [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) .<br>
+
 
 ## 2. Model
 <img  src="Results/Face 3D.png"  />
