@@ -6,6 +6,8 @@ Our dataset consist of [**BU face data**](http://www.cs.binghamton.edu/~lijun/Re
   The dataset can be downloaded from [google drive](https://drive.google.com/drive/folders/1d8rlqXgbfDQxcOKvSIssm56jWUVz6oIe?usp=sharing)
 
 ## 2. Model
+<img  src="Results/Face 3D.png"  />
+
 ## 3. Results
 Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 ### Example           
