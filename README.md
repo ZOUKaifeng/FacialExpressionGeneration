@@ -25,7 +25,7 @@ Our results are based on 83 landmarks which should be reconstructed to deform 3D
 | ------------- | ------------- | ------------- | 
 | <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |   
 ### Rendered Example           
-| Happy  | Surprise |  Angry | 
-| ------------- | ------------- | ------------- | 
-| <img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
+| Model|Happy  | Surprise |  Angry | 
+| ------------- | ------------- | ------------- | -------------------|
+| Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
        
