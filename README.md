@@ -1,4 +1,4 @@
-# DisenFace
+# FEGTOR
 Towards accurate, high quality, conditioned 3D face sequences generation.
 
 ## 1. Dataset
