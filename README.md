@@ -9,7 +9,7 @@ Towards accurate, high quality, conditioned 3D face sequences generation.
 <img  src="Results/Face 3D.png"  />
 
 ## 3. Results
-Our results are based on 83 landmarks which will be reconstructed to 3D mesh
+Our results are based on 83 landmarks which should be reconstructed to deform 3D mesh
 ### Example           
 | Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | 
