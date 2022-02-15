@@ -2,8 +2,7 @@
 3D Facial expression generator with Transformer-based conditional VAE.
 
 ## 1. Dataset
-Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) .<br>
-. It consists of a total of 606 sequences of 83 manually labeled landmarks extracted from 3D facial scans. 6 basic expressions (anger, disgust, fear, happy, sad, and surprise) have been recorded for each of 101 subjects.
+Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) .<br>. It consists of a total of 606 sequences of 83 manually labeled landmarks extracted from 3D facial scans. 6 basic expressions (anger, disgust, fear, happy, sad, and surprise) have been recorded for each of 101 subjects.
 
 ## 2. Model
 <img  src="Results/Face 3D.png"  />
