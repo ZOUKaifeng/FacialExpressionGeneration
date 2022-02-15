@@ -26,7 +26,7 @@ The comparison is showed below:
 | ------------- | ------------- | ------------- | 
 | <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |   
 ### Rendered Example 
-We apply the expression based on landmarks on a neutral mesh by ICP and RBF.
+We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
 The results of three method are shown below:
 | Model|Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | -------------------|
