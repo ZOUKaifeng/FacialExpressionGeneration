@@ -17,7 +17,7 @@ Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.e
 | CondGRU| 101.5 |
 | Action2motion| 33.3 |
 | GRU VAE | 28.7 |
-| ours | 13.7 |
+| Ours | 13.7 |
 ## 4. Results
 Our results are based on 83 landmarks which should be reconstructed to deform 3D mesh
 ### Example           
