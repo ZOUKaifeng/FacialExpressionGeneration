@@ -2,7 +2,7 @@
 Towards accurate, high quality, conditioned 3D face sequences generation.
 
 ## 1. Dataset
-Our dataset consist of [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) .<br>
+ [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) .<br>
 
 
 ## 2. Model
