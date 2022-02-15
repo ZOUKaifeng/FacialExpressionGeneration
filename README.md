@@ -17,7 +17,7 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 ### Rendered Example           
 | Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | 
-| <img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
+| <img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
                                               
 ## 4. Evaluation
 1. FID score
