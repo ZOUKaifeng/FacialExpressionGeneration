@@ -13,7 +13,7 @@ Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.e
 
 
 | Model type  | FID | Accuracy |
-| ------------- | -------------  |
+| ------------- | -------------  |-------------  |
 | CondGRU| 101.5 |  16.69% |
 | Action2motion| 33.3 | 60.89 % |
 | GRU VAE | 28.7 |  71.07% |
