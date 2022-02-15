@@ -19,12 +19,15 @@ Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.e
 | GRU VAE | 28.7 |
 | Ours | 13.7 |
 ## 4. Results
-Our results are based on 83 landmarks which should be reconstructed to deform 3D mesh
+The outputs of transformer VAE are a set of landmarks sequence.<br> 
+The comparison is showed below:
 ### Example           
 | Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | 
 | <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |   
-### Rendered Example           
+### Rendered Example 
+We apply the expression based on landmarks on a neutral mesh by ICP and RBF.
+The results of three method are shown below:
 | Model|Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | -------------------|
 | Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
