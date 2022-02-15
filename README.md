@@ -23,8 +23,9 @@ Our results are based on 83 landmarks which will be reconstructed to 3D mesh
 1. FID score
 
 
-| Model type | Angry  | Disgust |  Fear | Happy | Sad | Surprise |
-| ------------- | ------------- | ------------- | ------------- |------------- |------------- |------------- |
-| Transformer VAE| $62.71\pm11.34$ | $67.77\pm7.69$ | $59.54\pm4.28$ | $58.92\pm7.24$ | $\pm$ | $68.37\pm7.83$ |
-| LSTM VAE| $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
-|Ours | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ | $\pm$ |
+| Model type  | FID |
+| ------------- | -------------  |
+| CondGRU| $101.5$ |
+| Action2motion| $33.3$ |
+| GRU VAE | $28.7$ |
+| GRU VAE | $13.7$ |
