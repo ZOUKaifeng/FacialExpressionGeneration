@@ -12,12 +12,12 @@ Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.e
 1. FID score
 
 
-| Model type  | FID |
+| Model type  | FID | Accuracy |
 | ------------- | -------------  |
-| CondGRU| 101.5 |
-| Action2motion| 33.3 |
-| GRU VAE | 28.7 |
-| Ours | 13.7 |
+| CondGRU| 101.5 |  16.69% |
+| Action2motion| 33.3 | 60.89 % |
+| GRU VAE | 28.7 |  71.07% |
+| Ours | 13.7 |  100% |
 ## 4. Results
 The outputs of transformer VAE are a set of landmarks sequence.<br> 
 The comparison is showed below:
