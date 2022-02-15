@@ -29,4 +29,4 @@ Our results are based on 83 landmarks which should be reconstructed to deform 3D
 | ------------- | ------------- | ------------- | -------------------|
 | Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
 | | | | |     
-| Action2Motion |<img  src="Results/gif/action2motion/Happy15.gif"  /> | <img src="Results/gif/action2motion/Surprise_15.gif"  /> |  <img src="Results/gif/action2motion/angry15.gif"  /> | 
+| Action2Motion |<img  src="Results/gif/action2motion/Happy15.gif"  /> | <img src="Results/gif/action2motion/Surprise15.gif"  /> |  <img src="Results/gif/action2motion/Angry15.gif"  /> | 
