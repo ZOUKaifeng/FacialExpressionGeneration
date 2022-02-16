@@ -24,6 +24,9 @@ The comparison is showed below:
 ### Example           
 
  <img  src="Results/gif/3DFacial_LM.gif"  />  
+ 
+ 
+ 
 ### Rendered Example 
 We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
 The results of three methods are shown below for comparison:
