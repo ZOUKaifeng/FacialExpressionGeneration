@@ -22,9 +22,8 @@ Our dataset is generated from the  [**BU face data**](http://www.cs.binghamton.e
 The outputs of transformer VAE are a set of landmarks sequence.<br> 
 The comparison is showed below:
 ### Example           
-| Happy  | Surprise |  Angry | 
-| ------------- | ------------- | ------------- | 
-| <img  src="Results/happy.gif"  /> | <img src="Results/surprise.gif"  /> |  <img src="Results/angry.gif"  /> |   
+
+ <img  src="Results/gif/3DFacial_LM.gif"  />  
 ### Rendered Example 
 We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
 The results of three methods are shown below for comparison:
