@@ -29,7 +29,7 @@ The comparison is showed below:
  
 ### Rendered Example 
 We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
-The results of three methods are shown below for comparison:
+The results of three methods are showed below for comparison:
 | Model|Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | -------------------|
 | Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
