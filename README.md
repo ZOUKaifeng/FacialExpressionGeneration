@@ -20,7 +20,7 @@ We use  [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DF
 | Ours | 13.7 |  100% |
 ## 4. Results
 The outputs of transformer VAE are a set of landmarks sequence.<br> 
-The comparison is showed below:
+The comparison is shown below:
 ### Example           
 
  <img  src="Results/gif/3DFacial_LM.gif"  />  
@@ -29,7 +29,7 @@ The comparison is showed below:
  
 ### Rendered Example 
 We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
-The results of three methods are showed below for comparison:
+The results of three methods are shown below for comparison:
 | Model|Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | -------------------|
 | Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
