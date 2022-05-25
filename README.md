@@ -40,7 +40,7 @@ The results of three methods are shown below for comparison:
 
 
 Results on COMA dataset. We developed a autoencoder to transform landmark to mesh.
-| ------------- | ------------- | -------------------|
- |<img  src="Results/gif/BareTeeth.gif"  /> | <img src="Results/gif/CheeksIn.gif"  /> |  <img src="Results/gif/HighSmile.gif"  /> | 
-| | | | |     
-|<img  src="Results/gif/LipsUp.gif"  /> | <img src="Results/gif/MouthExtrem.gif"  /> |  <img src="Results/gif/MouthUp.gif"  /> | 
+
+ <img  src="Results/gif/BareTeeth.gif"  />  <img src="Results/gif/CheeksIn.gif"  />   <img src="Results/gif/HighSmile.gif"  />  
+  
+<img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
