@@ -37,3 +37,11 @@ The results of three methods are shown below for comparison:
 | Action2Motion |<img  src="Results/gif/action2motion/Happy15.gif"  /> | <img src="Results/gif/action2motion/Surprise15.gif"  /> |  <img src="Results/gif/action2motion/Angry15.gif"  /> | 
 | | | | |  
 |GRU-VAE|<img  src="Results/gif/gru/gru_happy15.gif"  /> | <img src="Results/gif/gru/Surprise15.gif"  /> |  <img src="Results/gif/gru/angry15.gif"  /> | 
+
+
+Results on COMA dataset. We developed a autoencoder to transform landmark to mesh.
+ |Happy  | Surprise |  Angry | 
+| ------------- | ------------- | -------------------|
+ |<img  src="Results/gif/Bareteeth.gif"  /> | <img src="Results/gif/CheeksIn.gif"  /> |  <img src="Results/gif/HighSmile.gif"  /> | 
+| | | | |     
+|<img  src="Results/gif/LipsUp.gif"  /> | <img src="Results/gif/MouthExtrem.gif"  /> |  <img src="Results/gif/MouthUp.gif"  /> | 
