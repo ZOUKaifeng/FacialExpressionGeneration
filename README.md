@@ -6,7 +6,7 @@ We use  [**BU face data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DF
 
 ## 2. Model
 Our model inherits its architecture from a conditional variational autoencoder, with a Transformer-based encoder (left rounded box in the figure below) and a Transformer-based decoder (right rounded box). While based on the vanilla Transformer, we use two learnable tokens per expression label <i>c</i> denoted as <i>token<sub>&mu;</sub></i> and <i>token<sub>&Sigma;</sub></i> to feed into the encoder, rather than directly using the label value. We use the expression label to choose the corresponding tokens to be temporarily prepended with the encoded input sequence. 
-The first two frames of the encoder output (corresponding to the tokens chosen as input) serve as the distribution parameters: mean <i>&mu;</i> and variance <i>&Sigma;</i>. Note that other encoder outputs are ignored, which implements a time pooling.
+The first two frames of the encoder output (corresponding to the tokens chosen as input) serve as the distribution parameters: mean <i>&mu;</i> and variance &Sigma;. Note that other encoder outputs are ignored, which implements a time pooling.
 
 <img  src="Results/Face 3D.png"  />
                                        
