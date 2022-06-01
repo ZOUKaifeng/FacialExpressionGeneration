@@ -14,7 +14,7 @@ The first two frames of the encoder output (corresponding to the tokens chosen a
 ### 3.1 Quantitative evaluation
 We used <b>Fréchet Inception Distance</b> score to evaluate the quality of generation and the <b>classification accuracy</b> for the disentanglement, which is summarized in the table below. 
 
-| Model type  | FID | Accuracy |
+| Model | FID | Accuracy |
 | ------------- | -------------  |-------------  |
 | CondGRU| 101.5 |  16.69% |
 | Action2motion| 33.3 | 60.89 % |
