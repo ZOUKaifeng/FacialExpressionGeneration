@@ -30,9 +30,8 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
  
  
 ### Videos of rendered meshes 
-Further, the full mesh animation can be obtained by our landmark-driven mesh deformation (“3D mesh deformation” in Section3).
-We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
-The results of three methods are shown below for comparison:
+The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function.<br> 
+Some of the results thus obtained are shown below:
 | Model|Happy  | Surprise |  Angry | 
 | ------------- | ------------- | ------------- | -------------------|
 | Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
@@ -50,7 +49,7 @@ Also has been developed is an autoencoder that can translate a landmark set to a
 <img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
 
 ## 4. Supplementary material
-Derivation of equation (3) from equation (2) in the paper:
+Derivation of equation (3) from equation (2) in the paper is provided as below:
 <img  src="Results/eq2toeq3.PNG"  />
 
-PS: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on the maxmization. 
+Note: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on the maxmization. 
