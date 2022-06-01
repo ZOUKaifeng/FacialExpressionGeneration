@@ -24,12 +24,12 @@ We used <b>Fréchet Inception Distance</b> score to evaluate the quality of gene
 ### 3.2 Qualitative evaluation
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
-#### Landmark videos for the visual comparison
+### Landmark videos for the visual comparison
 
  <img  src="Results/gif/3DFacial_LM.gif"  />  
  
  
-#### Videos of rendered meshes 
+### Videos of rendered meshes 
 Further, the full mesh animation can be obtained by our landmark-driven mesh deformation (“3D mesh deformation” in Section3).
 We apply the expression based on landmarks on a neutral mesh by ICP and RBF.<br> 
 The results of three methods are shown below for comparison:
@@ -42,7 +42,7 @@ The results of three methods are shown below for comparison:
 |GRU-VAE|<img  src="Results/gif/gru/gru_happy15.gif"  /> | <img src="Results/gif/gru/Surprise15.gif"  /> |  <img src="Results/gif/gru/angry15.gif"  /> | 
 
 
-#### Rendered mesh results on COMA dataset
+### Rendered mesh results on COMA dataset
 Also has been developed is an autoencoder that can translate a landmark set to a full facial mesh.
 
  <img  src="Results/gif/BareTeeth.gif"  />  <img src="Results/gif/CheeksIn.gif"  />   <img src="Results/gif/HighSmile.gif"  />  
