@@ -51,7 +51,7 @@ Results on COMA dataset. We developed a autoencoder to transform landmark to mes
 <img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
 
 ## 5. Supplementary material
-Proof of equation (2) to equation (3) in the paper.
+Derivation of equation (3) from equation (2) in the paper:
 <img  src="Results/eq2toeq3.PNG"  />
 
-PS: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on maxmizing. 
+PS: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on the maxmization. 
