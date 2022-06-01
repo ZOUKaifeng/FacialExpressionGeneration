@@ -11,9 +11,8 @@ The first two frames of the encoder output (corresponding to the tokens chosen a
 <img  src="Results/Face 3D.png"  />
                                        
 ## 3. Evaluation
-# 3.1 Quantitative evaluation
-We used <b>Fréchet Inception Distance</b> score to evaluate the quality of generation and the <b>classification accuracy</b> for the disentanglement. 
-1. FID score
+### 3.1 Quantitative evaluation
+We used <b>Fréchet Inception Distance</b> score to evaluate the quality of generation and the <b>classification accuracy</b> for the disentanglement, which is summarized in the table below. 
 
 | Model type  | FID | Accuracy |
 | ------------- | -------------  |-------------  |
@@ -22,7 +21,7 @@ We used <b>Fréchet Inception Distance</b> score to evaluate the quality of gene
 | GRU VAE | 28.7 |  71.07% |
 | Ours | 13.7 |  100% |
 
-# 3.2 Qualitative evaluation
+### 3.2 Qualitative evaluation
 
 ## 4. Results
 The outputs of transformer VAE are a set of landmarks sequence.<br> 
