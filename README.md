@@ -44,3 +44,6 @@ Results on COMA dataset. We developed a autoencoder to transform landmark to mes
  <img  src="Results/gif/BareTeeth.gif"  />  <img src="Results/gif/CheeksIn.gif"  />   <img src="Results/gif/HighSmile.gif"  />  
   
 <img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
+
+## 5. Supplementary material
+<img  src="Results/eq2toeq3.png"  />
