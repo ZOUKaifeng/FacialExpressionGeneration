@@ -47,3 +47,4 @@ Results on COMA dataset. We developed a autoencoder to transform landmark to mes
 
 ## 5. Supplementary material
 <img  src="Results/eq2toeq3.PNG"  />
+PS: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on maxmizing. 
