@@ -10,7 +10,7 @@ The first two frames of the encoder output (corresponding to the tokens chosen a
 
 <img  src="Results/Face 3D.png"  />
                                        
-## 3. Evaluation
+## 3. Evaluation, results
 ### 3.1 Quantitative evaluation
 We used <b>Fréchet Inception Distance</b> score to evaluate the quality of generation and the <b>classification accuracy</b> for the disentanglement, which is summarized in the table below. 
 
@@ -23,7 +23,6 @@ We used <b>Fréchet Inception Distance</b> score to evaluate the quality of gene
 
 ### 3.2 Qualitative evaluation
 
-## 4. Results
 The outputs of transformer VAE are a set of landmarks sequence.<br> 
 The comparison is shown below:
 ### Example           
@@ -50,7 +49,7 @@ Results on COMA dataset. We developed a autoencoder to transform landmark to mes
   
 <img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
 
-## 5. Supplementary material
+## 4. Supplementary material
 Derivation of equation (3) from equation (2) in the paper:
 <img  src="Results/eq2toeq3.PNG"  />
 
