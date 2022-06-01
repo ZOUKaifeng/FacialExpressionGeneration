@@ -40,7 +40,7 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
 |GRU-VAE|<img  src="Results/gif/gru/gru_happy15.gif"  /> | <img src="Results/gif/gru/Surprise15.gif"  /> |  <img src="Results/gif/gru/angry15.gif"  /> | 
 
 
-### Rendered mesh results on <a href=https://arxiv.org/pdf/1807.10267.pdf> COMA</a> dataset
+### Rendered mesh results on <a href=https://coma.is.tue.mpg.de> COMA</a> dataset
 Also has been developed is an autoencoder that can translate a landmark set to a full facial mesh.
 
  <img  src="Results/gif/BareTeeth.gif"  />  <img src="Results/gif/CheeksIn.gif"  />   <img src="Results/gif/HighSmile.gif"  />  
