@@ -19,7 +19,7 @@ We used <b>Fréchet Inception Distance</b> score to evaluate the quality of gene
 | CondGRU| 101.5 |  16.69% |
 | Action2motion| 33.3 | 60.89 % |
 | GRU VAE | 28.7 |  71.07% |
-| Ours | 13.7 |  100% |
+| FEGTOR (ours) | 13.7 |  100% |
 
 ### 3.2 Qualitative evaluation
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
