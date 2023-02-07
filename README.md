@@ -33,6 +33,10 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
  <img  src="Results/gif/happy.gif"  />  
  
  
+ #### "Surprise expression"
+
+ <img  src="Results/gif/surprise.gif"  />  
+ 
 ### Videos of rendered meshes 
 The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
 | Model|Happy  | Surprise |  Angry | 
