@@ -10,7 +10,7 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
                                        
 
 
-### 3. Results
+## 3. Results
 
 #### Diversity of mouth open
  <img  src="Results/diversity_mouth_open.jpg"  />  
@@ -52,3 +52,4 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  
  #### Exaggeration
   <img  src="Results/gif/exaggeration.gif"  /> 
+  
