@@ -26,7 +26,11 @@ Since we add the displacements to the neutral face to deform it, an exaggerated 
 
 ### Landmark videos for the visual comparison
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
- <img  src="Results/gif/3DFacial_LM.gif"  />  
+
+
+#### "Happy expression"
+
+ <img  src="Results/gif/happy.gif"  />  
  
  
 ### Videos of rendered meshes 
