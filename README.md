@@ -18,14 +18,14 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 #### Diversity of baretheeth
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
-The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
+
 
 #### Exaggeration
 Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
  <img  src="Results/exaggeration.jpg"  />
 
 ### Landmark videos for the visual comparison
-
+The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
  <img  src="Results/gif/3DFacial_LM.gif"  />  
  
  
