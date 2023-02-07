@@ -14,6 +14,7 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 
 #### Diversity of mouth open
  <img  src="Results/diversity_mouth_open.jpg"  />  
+ 
 #### Diversity of baretheeth
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
