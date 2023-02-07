@@ -22,7 +22,7 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
 
 #### Exaggeration
 Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
-
+ <img  src="Results/exaggeration.jpg"  />
 
 ### Landmark videos for the visual comparison
 
