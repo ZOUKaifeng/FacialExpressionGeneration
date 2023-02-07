@@ -3,6 +3,14 @@
 ## 1. Dataset
 
 We test our method on [**CoMA dataset**](https://coma.is.tue.mpg.de/) and [**BU-4DFE data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html).
+
+### Data preparation
+Landmarks of CoMA should be extracted from the mesh.
+
+```bash
+python data_preprocessing.py
+```
+
 ## 2. Model
 Our approach is divided into two steps. Firstly, a Transformer VAE is trained to perform the conditional generation of landmarks sequences. Then a landmark-guided mesh deformation (LGMD) model estimates vertex-wise displacements, which is used to deform a neutral face to the expected expression frame by frame.
 
