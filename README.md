@@ -42,3 +42,9 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  
 #### Diversity of baretheeth
  <img  src="Results/gif/div_bareteeth.gif"  /> 
+ 
+ 
+  
+#### Random sampling from Gaussian distribution
+
+ <img  src="Results/gif/random_generation.gif"  /> 
