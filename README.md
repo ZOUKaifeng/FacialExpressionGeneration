@@ -48,3 +48,7 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
 #### Random sampling from Gaussian distribution
 
  <img  src="Results/gif/random_generation.gif"  /> 
+ 
+ 
+ #### Exaggernation
+  <img  src="Results/gif/exaggerantion.gif"  /> 
