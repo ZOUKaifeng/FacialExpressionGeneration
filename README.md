@@ -12,6 +12,7 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 
 ## 3. Results
 
+### 3.1 Mesh results
 #### Diversity of mouth open
  <img  src="Results/diversity_mouth_open.jpg"  />  
  
@@ -24,7 +25,7 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
  <img  src="Results/exaggeration.jpg"  />
 
-### Landmark videos for the visual comparison
+### 3.2 Landmark videos for the visual comparison
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
 
@@ -37,7 +38,7 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
 
  <img  src="Results/gif/surprise.gif"  />  
  
-### Videos of meshes 
+### 3.3 Videos of meshes 
 The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
  
 #### Diversity 
