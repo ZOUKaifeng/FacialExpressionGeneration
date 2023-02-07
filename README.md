@@ -4,10 +4,9 @@
 
 We test our method on [**CoMA dataset**](https://coma.is.tue.mpg.de/) and [**BU-4DFE data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html).
 ## 2. Model
-Our model inherits its architecture from a <a href="https://proceedings.neurips.cc/paper/2015/file/8d55a249e6baa5c06772297520da2051-Paper.pdf}"> conditional variational autoencoder </a>, with a Transformer-based encoder (left rounded box in the figure below) and a Transformer-based decoder (right rounded box). While based on the vanilla <a href="https://proceedings.neurips.cc/paper/2015/file/8d55a249e6baa5c06772297520da2051-Paper.pdf"> Transformer </a>, we use two learnable tokens per expression label <i>c</i> denoted as <i>token<sub>&mu;</sub></i> and <i>token<sub>&Sigma;</sub></i> to feed into the encoder, rather than directly using the label value. We use the expression label to choose the corresponding tokens to be temporarily prepended with the encoded input sequence. 
-The first two frames of the encoder output (corresponding to the tokens chosen as input) serve as the distribution parameters: mean <i>&mu;</i> and variance &Sigma;. Note that other encoder outputs are ignored, which implements a <a href="https://arxiv.org/pdf/2104.05670.pdf">time pooling</a>.
+Our approach is divided into two steps. Firstly, a Transformer VAE is trained to perform the conditional generation of landmarks sequences. Then a landmark-guided mesh deformation (LGMD) model estimates vertex-wise displacements, which is used to deform a neutral face to the expected expression frame by frame.
 
-<img  src="Results/Face 3D.png"  />
+<img  src="Results/MainFigure.png"  />
                                        
 ## 3. Evaluation, results
 ### 3.1 Quantitative evaluation
