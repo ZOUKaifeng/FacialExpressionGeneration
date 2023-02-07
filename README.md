@@ -37,26 +37,8 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
 
  <img  src="Results/gif/surprise.gif"  />  
  
-### Videos of rendered meshes 
+### Videos of meshes 
 The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
-| Model|Happy  | Surprise |  Angry | 
-| ------------- | ------------- | ------------- | -------------------|
-| Ours |<img  src="Results/gif/trans/trans_Happy15.gif"  /> | <img src="Results/gif/trans/transSurprise_15.gif"  /> |  <img src="Results/gif/trans/trans_angry15.gif"  /> | 
-| | | | |     
-| Action2Motion |<img  src="Results/gif/action2motion/Happy15.gif"  /> | <img src="Results/gif/action2motion/Surprise15.gif"  /> |  <img src="Results/gif/action2motion/Angry15.gif"  /> | 
-| | | | |  
-|GRU-VAE|<img  src="Results/gif/gru/gru_happy15.gif"  /> | <img src="Results/gif/gru/Surprise15.gif"  /> |  <img src="Results/gif/gru/angry15.gif"  /> | 
-
-<!--
-### Rendered mesh results on <a href=https://coma.is.tue.mpg.de> COMA</a> dataset
-Also has been developed is an autoencoder that can translate a landmark set to a full facial mesh.
-
- <img  src="Results/gif/BareTeeth.gif"  />  <img src="Results/gif/CheeksIn.gif"  />   <img src="Results/gif/HighSmile.gif"  />  
-  
-<img  src="Results/gif/LipsUp.gif"  />  <img src="Results/gif/MouthExtrem.gif"  />  <img src="Results/gif/MouthUp.gif"  /> 
--->
-## 4. Supplementary material
-Derivation of equation (3) from equation (2) in the paper is provided as below:
-<img  src="Results/eq2toeq3.PNG"  />
-
-Note: The expectation is about variable z, so a term containing p(c) can be unhinged as a constant which has no impact on the maxmization. 
+ 
+#### Diversity of baretheeth
+ <img  src="Results/gif/div_bareteeth.gif"  /> 
