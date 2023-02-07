@@ -53,3 +53,8 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  #### Exaggeration
   <img  src="Results/gif/exaggeration.gif"  /> 
   
+  
+    
+  #### Mesh comparison
+  
+  #### Noise removal
