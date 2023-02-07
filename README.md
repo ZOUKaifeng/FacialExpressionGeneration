@@ -11,6 +11,12 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 
 
 ### 3. Results
+
+#### Diversity of mouth open
+ <img  src="Results/diversity_mouth_open.jpg"  />  
+#### Diversity of baretheeth
+ <img  src="Results/diversity_baretheeth.jpg"  />  
+
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
 ### Landmark videos for the visual comparison
