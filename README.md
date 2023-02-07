@@ -6,20 +6,11 @@ We test our method on [**CoMA dataset**](https://coma.is.tue.mpg.de/) and [**BU-
 ## 2. Model
 Our approach is divided into two steps. Firstly, a Transformer VAE is trained to perform the conditional generation of landmarks sequences. Then a landmark-guided mesh deformation (LGMD) model estimates vertex-wise displacements, which is used to deform a neutral face to the expected expression frame by frame.
 
-<img  src="Results/MainFigure.png"  />
+<img  src="Results/model1.png"  />
                                        
-## 3. Evaluation, results
-### 3.1 Quantitative evaluation
-We used <b>Fréchet Inception Distance</b> score to evaluate the quality of generation and the <b>classification accuracy</b> for the disentanglement, which is summarized in the table below. 
 
-| Model | FID | Accuracy |
-| ------------- | -------------  |-------------  |
-| CondGRU| 101.5 |  16.69% |
-| Action2motion| 33.3 | 60.89 % |
-| GRU VAE | 28.7 |  71.07% |
-| FEGTOR (ours) | 13.7 |  100% |
 
-### 3.2 Qualitative evaluation
+### 3. Results
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
 ### Landmark videos for the visual comparison
