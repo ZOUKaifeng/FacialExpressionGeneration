@@ -28,11 +28,6 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
 
-
-#### Exaggeration
-Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
- <img  src="Results/exaggeration.jpg"  />
-
 ### 3.2 Landmark videos for the visual comparison
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
@@ -60,13 +55,15 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  
  
  #### Exaggeration
+ Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
+ 
   <img  src="Results/gif/exaggeration.gif"  /> 
   
   
     
   #### Noise removal
   
-   <img  src="Results/gif/gt.gif"  width=512 /> 
+   <img  src="Results/gif/noise_removal.gif"  /> 
     
-   <img  src="Results/gif/ours.gif" width=512 /> 
+
 
