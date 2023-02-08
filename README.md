@@ -66,7 +66,7 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
     
   #### Noise removal
   
-   <img  src="Results/gif/gt.gif"  /> 
+   <img  src="Results/gif/gt.gif"  width=512 /> 
     
-   <img  src="Results/gif/ours.gif"  /> 
+   <img  src="Results/gif/ours.gif" width=512 /> 
 
