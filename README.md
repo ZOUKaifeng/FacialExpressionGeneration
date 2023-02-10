@@ -18,12 +18,36 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 ## 3. Results
 
 ### 3.1 Mesh results
-#### Diversity of "mouth open" expression
+The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
+  
+#### Random sampling from Gaussian distribution
+
+ <img  src="Results/gif/random_generation.gif"  /> 
+ 
+#### Diversity generated expressions
+
+Diversity of "mouth open" expression
  <img  src="Results/diversity_mouth_open.jpg"  />  
  
-#### Diversity of "baretheeth" expression
+Diversity of "baretheeth" expression
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
+##### Diversity 
+ <img  src="Results/gif/div_bareteeth.gif"  /> 
+ 
+
+ 
+#### Exaggeration
+ Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
+ 
+  <img  src="Results/gif/exaggeration.gif"  /> 
+  
+  
+    
+  #### Noise removal
+  
+   <img  src="Results/gif/noise_removal.gif"  /> 
+   
 
 ### 3.2 Landmark videos for the visual comparison
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
@@ -38,29 +62,6 @@ The outputs of transformer VAE, a set of landmark sequences conditioned by the e
 
  <img  src="Results/gif/surprise.gif"  />  
  
-### 3.3 Videos of meshes 
-The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
- 
-#### Diversity 
- <img  src="Results/gif/div_bareteeth.gif"  /> 
- 
- 
-  
-#### Random sampling from Gaussian distribution
-
- <img  src="Results/gif/random_generation.gif"  /> 
- 
- 
- #### Exaggeration
- Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
- 
-  <img  src="Results/gif/exaggeration.gif"  /> 
-  
-  
-    
-  #### Noise removal
-  
-   <img  src="Results/gif/noise_removal.gif"  /> 
     
 
 ## 4. Code
