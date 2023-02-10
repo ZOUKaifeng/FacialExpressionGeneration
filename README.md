@@ -32,19 +32,13 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
 ##### Diversity of "baretheeth" expression
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
-##### Diversity 
+##### Diversity "baretheeth" expression
  <img  src="Results/gif/div_bareteeth.gif"  /> 
  
-
- 
-#### 3.1.3 Exaggeration
- Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
- 
-  <img  src="Results/gif/exaggeration.gif"  /> 
-  
   
     
-#### 3.1.4 Noise removal
+#### 3.1.3 Noise removal
+Since our model is based on VAE, it generates smoother sequences compared to the original data.
   
    <img  src="Results/gif/noise_removal.gif"  /> 
    
