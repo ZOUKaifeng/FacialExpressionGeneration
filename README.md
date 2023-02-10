@@ -26,10 +26,10 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  
 #### Diversity generated expressions
 
-Diversity of "mouth open" expression
+##### Diversity of "mouth open" expression
  <img  src="Results/diversity_mouth_open.jpg"  />  
  
-Diversity of "baretheeth" expression
+##### Diversity of "baretheeth" expression
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
 ##### Diversity 
