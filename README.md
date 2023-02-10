@@ -44,8 +44,7 @@ Since our model is based on VAE, it generates smoother sequences (right) compare
    
 
 ### 3.2 Landmark videos for the visual comparison
-The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. The Action2Motion model is data-hungry, thus given a small dataset (only a few hundred compared to XXX in their original motion project) it is under-fitted and does not fully learn the expression behavior (The face does not come back to the neutral face). The GRU-VAE model (middle) produces less expressive faces.  Our model trade off between the expressiveness and ... <br> 
-
+The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements.  The Action2Motion model (left) is data-hungry, thus given a small dataset (only a few hundred compared to XXX in their original motion project) it is under-fitted and does not fully learn the expression behavior (The face does not come back to the neutral face). The GRU-VAE model (middle) tends to produce less expressive faces. Our model produces expressive faces (comparable to Action2Motion) and successfully learned the expression behavior from a small dataset, i.e. It takes a good balance between the expressiveness in the generation and the size of the dataset it requires. <br> 
 
 #### "Happy" expression
 
