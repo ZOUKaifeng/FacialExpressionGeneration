@@ -18,10 +18,10 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 ## 3. Results
 
 ### 3.1 Mesh results
-#### Diversity of "mouth open"
+#### Diversity of "mouth open" expression
  <img  src="Results/diversity_mouth_open.jpg"  />  
  
-#### Diversity of "baretheeth"
+#### Diversity of "baretheeth" expression
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
 
