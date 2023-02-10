@@ -20,11 +20,11 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
 ### 3.1 Mesh results
 The full mesh animation can be obtained by our landmark-driven 3D mesh deformation, based on a Radial Basis Function. Some of the results thus obtained are shown below: <br>
   
-#### Random sampling from Gaussian distribution
+#### 3.1.1 Random sampling from Gaussian distribution
 
  <img  src="Results/gif/random_generation.gif"  /> 
  
-#### Diversity generated expressions
+#### 3.1.2 Diversity generated expressions
 
 ##### Diversity of "mouth open" expression
  <img  src="Results/diversity_mouth_open.jpg"  />  
@@ -37,14 +37,14 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
  
 
  
-#### Exaggeration
+#### 3.1.3 Exaggeration
  Since we add the displacements to the neutral face to deform it, an exaggerated expression can easily be obtained by multiplying the displacement with a constant value.
  
   <img  src="Results/gif/exaggeration.gif"  /> 
   
   
     
-  #### Noise removal
+#### 3.1.4 Noise removal
   
    <img  src="Results/gif/noise_removal.gif"  /> 
    
