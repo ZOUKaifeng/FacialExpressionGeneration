@@ -7,11 +7,7 @@ We test our method on [**CoMA dataset**](https://coma.is.tue.mpg.de/) and [**BU-
 ### Data preparation
 We extract landmarks from meshes in the CoMA dataset.
 
-<--! 
-```bash
-%python data_preprocessing.py
-```
--->
+
 ## 2. Model
 Our approach is divided into two steps. Firstly, a Transformer VAE is trained to perform the conditional generation of landmarks sequences. Then a landmark-guided mesh deformation (LGMD) model estimates vertex-wise displacements, which is used to deform a neutral face to the expected expression frame by frame.
 
@@ -29,7 +25,7 @@ Our approach is divided into two steps. Firstly, a Transformer VAE is trained to
  <img  src="Results/diversity_bareteeth.jpg"  />  
 
 
-### 3.2 Landmark videos for the visual comparison
+### 3.2 Landmark videos for the visual comparisonCancel changes
 The outputs of transformer VAE, a set of landmark sequences conditioned by the expression label, have been compared to those from other models for the qualitative jugements. <br> 
 
 
