@@ -39,7 +39,7 @@ The full mesh animation can be obtained by our landmark-driven 3D mesh deformati
 #### 3.1.3 Noise removal
 Since our model is based on VAE, it generates smoother sequences (right) compared to the original data (left).
   
-   <img  src="Results/gif/noise_removal.gif"  /> 
+   <img  src="Results/gif/noise_rem.gif"  /> 
    
 
 ### 3.2 Landmark videos for the visual comparison
