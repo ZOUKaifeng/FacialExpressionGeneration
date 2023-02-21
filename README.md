@@ -2,7 +2,7 @@
 
 ## 1. Dataset
 
-We test our method on two commonly used facial expression datasets, [**CoMA dataset**](https://coma.is.tue.mpg.de/) and [**BU-4DFE data**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html).
+We test our method on two commonly used facial expression datasets, [**CoMA**](https://coma.is.tue.mpg.de/) and [**BU-4DFE**](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html).
 
 ### Data preparation
 68 landmarks have been manually sampled on a full mesh of the CoMA dataset. We need to do it only once, since all meshes come in a same topology. Frame length has been normalized as well by subsampling and linear interpolation.
